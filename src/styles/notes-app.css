@@ -1,0 +1,31 @@
+/* Mobile First */
+
+header {
+  padding: 15px 20px;
+  background-color: purple;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 1rem 10rem;
+  }
+
+  .nav-list {
+    font-size: 28px;
+  }
+}
