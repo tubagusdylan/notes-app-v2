@@ -93,7 +93,6 @@ function unarchiveNote(id) {
     if (note.id === id) {
       return { ...note, archived: false };
     }
-
     return note;
   });
 }
@@ -123,4 +122,16 @@ function formatedTimeStamp(time) {
   return newTime;
 }
 
-export { getAllNotes, getActiveNotes, getArchivedNotes, deleteNote, editNote, getNote, archiveNote, unarchiveNote, addNote, formatedTimeStamp };
+function searchNoteActive(keyword) {
+  const activeNotes = notes.filter((note) => !note.archived);
+  const specifyNotes = activeNotes.filter((note) => note.title.toLowerCase().includes(keyword?.toLowerCase()));
+  return specifyNotes;
+}
+
+function searchNoteArchive(keyword) {
+  const archiveNotes = notes.filter((note) => note.archived);
+  const specifyNotes = archiveNotes.filter((note) => note.title.toLowerCase().includes(keyword?.toLowerCase()));
+  return specifyNotes;
+}
+
+export { getAllNotes, getActiveNotes, getArchivedNotes, deleteNote, editNote, getNote, archiveNote, unarchiveNote, addNote, formatedTimeStamp, searchNoteActive, searchNoteArchive };
