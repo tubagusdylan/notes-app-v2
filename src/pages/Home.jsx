@@ -20,7 +20,7 @@ class Home extends React.Component {
       <div className="container">
         <h1>Active Notes</h1>
         <SearchNotes />
-        <NotesContainer notes={this.state.notes} />
+        {this.state.notes.length > 0 ? <NotesContainer notes={this.state.notes} /> : <p className="msg">Catatan kosong</p>}
         <Link to="/notes/new">
           <button className="button">
             <i className="fa-solid fa-plus"></i>

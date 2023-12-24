@@ -54,7 +54,7 @@ class AddNewNotes extends React.Component {
         <form onSubmit={this.onAddNewNote}>
           <input type="text" name="title" id="title" className="title-input" placeholder="Ini Judul Catatan" onChange={this.onChangeTitle} />
           <textarea name="body" id="body" className="body-input" placeholder="Ini Isi Catatan" rows={12} onChange={this.onChangeBody}></textarea>
-          <button className="button-add">
+          <button className="button">
             <i className="fa-solid fa-check"></i>
           </button>
         </form>
