@@ -2,6 +2,7 @@ import HomeWrapper from "./pages/Home";
 import AddNewNotes from "./pages/AddNewNotes";
 import ArchivedWrapper from "./pages/Archived";
 import DetailNote from "./pages/DetailNote";
+import PageNotFound from "./pages/PageNotFound";
 import { Routes, Route, Link } from "react-router-dom";
 import "./styles/notes-app.css";
 
@@ -30,6 +31,7 @@ const NotesApp = () => {
           <Route path="/archives" element={<ArchivedWrapper />} />
           <Route path="/notes/new" element={<AddNewNotes />} />
           <Route path="/notes/:id" element={<DetailNote />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>
     </>
